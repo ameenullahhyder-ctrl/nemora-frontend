@@ -80,7 +80,7 @@ async function fetchData(ids) {
   setCurrentPrompt: async (prompt: string) => {
     set({ currentPrompt: prompt })
     try {
-      const response = await fetch('http://localhost:5000/api/v1/analyze', {
+      const response = await fetch('https://nemora-backend.onrender.com/api/v1/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ raw_prompt: prompt })
