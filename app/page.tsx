@@ -79,18 +79,18 @@ export default function Nemora() {
         
         {/* Stars */}
         <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-px h-px bg-white rounded-full animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                opacity: Math.random() * 0.7 + 0.3,
-              }}
-            />
-          ))}
+         {[...Array(50)].map((_, i) => (
+  <div
+    key={i}
+    className="absolute w-px h-px bg-white rounded-full animate-pulse"
+    style={{
+      left: `${(i * 37.7) % 100}%`,
+      top: `${(i * 61.3) % 100}%`,
+      animationDelay: `${(i * 0.3) % 3}s`,
+      opacity: 0.3 + (i % 7) * 0.1,
+    }}
+  />
+))}
         </div>
 
         {/* Subtle grid */}
